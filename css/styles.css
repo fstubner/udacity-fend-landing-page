@@ -85,7 +85,7 @@ h2 {
 
 section {
   grid-column: 2;
-  min-height: 70vh;
+  min-height: 75vh;
   max-width: 65vw;
   transition: background-color 1s ease;
   padding: 1rem;
