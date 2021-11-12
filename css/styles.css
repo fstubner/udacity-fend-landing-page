@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap");
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: rgb(39, 0, 61);
+  background: linear-gradient(
+    360deg,
+    rgba(39, 0, 61, 1) 0%,
+    rgba(47, 34, 122, 1) 20%,
+    rgba(34, 93, 122, 1) 40%,
+    rgba(33, 47, 145, 1) 60%,
+    rgba(32, 60, 140, 1) 80%,
+    rgba(0, 9, 24, 1) 100%
+  );
+  color: gainsboro;
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+}
+
+/* Header */
+header {
+  grid-row: 1;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  background-color: gainsboro;
+  color: #2b2b2b;
+  position: sticky;
+  top: 0;
+  height: max-content;
+  gap: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  list-style: none;
+  padding: 1.5rem;
+  cursor: pointer;
+  min-width: max-content;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #3b3b3b;
+  color: gainsboro;
+}
+
+.active-nav-item {
+  background-color: #2b2b2b;
+  color: gainsboro;
+}
+
+/* Content */
+.content-grid-container {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 0.05fr 1fr 0.05fr;
+}
+
+p {
+  text-align: left;
+}
+
+h1 {
+  grid-column: 2;
+  padding: 8rem 0 4rem;
+  font-size: 5rem;
+}
+
+h2 {
+  border-bottom: 1px solid goldenrod;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  font-size: 3.5rem;
+  min-width: max-content;
+}
+
+section {
+  grid-column: 2;
+  min-height: 70vh;
+  max-width: 65vw;
+  transition: background-color 1s ease;
+  padding: 1rem;
+  margin: 2rem 0 4rem;
+}
+
+.section-container {
+  min-height: max-content;
+}
+
+section:nth-child(odd) {
+  justify-self: end;
+}
+
+section:nth-child(odd) * {
+  text-align: right;
+}
+
+.active-section {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  grid-row: 4;
+  height: 5rem;
+  background-color: #2b2b2b;
+  box-shadow: 0 -10px 30px 10px rgba(0, 9, 24, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 480px) {
+  .content-grid-container {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 0 1fr;
+  }
+
+  h1 {
+    justify-self: center;
+    width: min-content;
+  }
+
+  section {
+    justify-self: center;
+  }
+
+  section:nth-child(odd) {
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 331px) {
+}
